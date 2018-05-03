@@ -15,6 +15,8 @@ public abstract  class Player {
 	private ArrayList listeners = new ArrayList ();
 	private PlayerState current_state;
 	
+	
+	
 	public Player (String name, Hand hand) {
 		
 		this.name = name;
@@ -27,8 +29,9 @@ public abstract  class Player {
 	}
 	
 	public void play(Dealer dealer) {
+
 		current_state.execute(dealer);
-	}
+		}
 	
 	public void reset () {
 		hand.reset();
